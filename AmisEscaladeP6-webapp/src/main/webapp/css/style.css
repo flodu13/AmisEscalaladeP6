@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+.flex {
+	display: flex !important;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	font-size: 100%;	
+	font-family: tahoma, geneva, sans-serif;
+	padding-top: 120px;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+#entete {
+	display: flex;
+	flex-wrap: non-wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #999999;
+}
+
+#menu {
+	display: flex;
+	flex-wrap: non-wrap;
+	justify-content: space-around;
+	font-weight: bold;
+}
+
+#plus {
+	width:30px;
+	height: auto;	
+	float: left;
+	padding-right: 10px;
+}
+
+#containerPLus{
+	line-height : 30px;
+}
+
+.positionNav {
+	
+	padding-bottom: 70px;
+}
+
+.connexion {
+	margin-right: 10px;
+	padding-top: 10px;
+}
+
+.logo {
+	padding-right: 20px;
+}
+
+.inscription {
+	margin-left: 10px;
+	padding-top: 10px;
+}
+
+.recherche {
+	margin-left: 10px;
+	padding-top: 10px;
+}
+
+.listSpot ul {
+	list-style-type: none;
+}
+.listSpot {
+	margin-top: 20px;
+}
+
+.detailSpot ul { 
+	list-style-type : circle  ; 
+	margin-right: 40px
+}
+
+
+.spots {
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.spot {
+	display: block;
+	text-align: center;
+	width: 300px;	
+}
+
+.listSpot p {
+	display: flex;
+	justify-content: center;	
+}
+
+.detailSpot{
+padding-top: 20px;
+width: 100%;
+}
+
+.detailSpot .image-gauche {
+padding-top : 25px;
+float: left;
+width:40%;
+height:auto;
+}
+.detailSpot .texte-droite {
+margin-left:40%;
+width: 60%;
+height: auto;
+}
+.detailSpot .detailSpotImg {
+width:90%;
+}
+
+.spot .img-container {
+	display: block;
+	overflow: hidden;
+	height: 200px;
+	position: relative;
+}
+
+.spot .img-container img {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+
+}
+.spot .img-container .tampon{
+	background-image: url(../images/officiel.png);
+	background-size: 100%;
+	display: block;
+	width: 50px;
+	position: relative;
+	height: 50px;
+	left: 0;
+	top: 100%;
+	transform: translateY(-129%);
+}
+
+.formulaire {	
+margin-top:40px;	
+margin-right:40px;
+margin-left:40px;
+margin-bottom:40px;
+}
+.formulaire a{	
+color: noir;
+	}
+
+@media screen and (max-width: 767px) {
+
+
+html {
+
+	padding-top: 200px;
+}
+	
+}
