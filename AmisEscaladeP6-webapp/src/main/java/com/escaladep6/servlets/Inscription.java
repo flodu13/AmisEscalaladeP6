@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.escaladep6.entities.Role;
 import com.escaladep6.entities.User;
@@ -43,8 +44,11 @@ public class Inscription extends HttpServlet {
         userService.addUser(user);
         
         
-        
-        this.getServletContext().getRequestDispatcher("/WEB-INF/views/inscription.jsp").forward(request, response);      
+        HttpSession session = request.getSession();
+
+        session.setAttribute("currentUser", user);
+                 
+        this.getServletContext().getRequestDispatcher("/WEB-INF/views/accueil.jsp").forward(request, response);       
        
 	}
 

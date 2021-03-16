@@ -46,23 +46,15 @@ public class UserDao extends AbstractDao {
 		User infoUser = new User();
 
 		try {
-			session.getTransaction().begin();
-			String sql = "SELECT s FROM " + User.class.getName() + " s"//
-					+ " JOIN FETCH s.topos topo"
-					+ " WHERE s.idUser= :idUser ";
-			String sql2 = "SELECT c FROM " + ReservationInquiry.class.getName() + " c"
-					+ " WHERE c.reservationinquiry.idUser= :idUser ";
 			
-
+			session.getTransaction().begin();
+			String sql = "SELECT s FROM " + User.class.getName() + " s"
+					+ " WHERE s.idUser= :idUser";
 			Query<User> query = session.createQuery(sql, User.class);
 			query.setParameter("idUser", idUser);
 			infoUser = query.getSingleResult();
-			Query<ReservationInquiry> query2 = session.createQuery(sql2, ReservationInquiry.class);
-			query2.setParameter("idUser", idUser);
-			List<ReservationInquiry> listReservation = query2.getResultList();
-			infoUser.setReservationInquiries(listReservation);
 			session.getTransaction().commit();
-
+					
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

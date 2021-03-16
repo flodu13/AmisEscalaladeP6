@@ -60,6 +60,7 @@ public class Topos extends HttpServlet {
 			reservationInquiry.setUser(userService.getUser(Integer.valueOf(request.getParameter("idUser"))));
 			reservationInquiry.setLendDate(new Date());
 			reservationInquiry.setStatut("en cours");
+			reservationInquiry.setMessage(request.getParameter("comment"));
 			
 		reservationInquiryService.addReservationInquiry(reservationInquiry);		
 		}
