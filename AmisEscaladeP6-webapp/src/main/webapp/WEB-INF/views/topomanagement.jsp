@@ -61,9 +61,18 @@
 									<c:out value="${ reservation.user.email }" />
 								</p>
 								<p class="card-text">
+									<c:if
+			test="${reservation.statut.equals(\"en cours\")}">
 									<input type="checkbox" name="reserved" id="reserved"
 										value="true" /> <label for id="reserved">accepter la
 										demande</label>
+										</c:if>
+										<c:if
+			test="${reservation.statut.equals(\"acceptée\")}">
+									demande acceptée
+									
+										</c:if>
+					
 								</p>
 							</c:forEach>
 							<p class="card-text">							

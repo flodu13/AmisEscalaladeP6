@@ -14,9 +14,9 @@ VALUES
 
 INSERT INTO public.user_account(id_user, email, lastname, login, name, password, code)
 VALUES
- (nextval('user_account_id_user_seq'), 'florent.r@gmail.com', 'Florent', 'flodu13', 'Petit', 'ctoRAz/QWO3iVgnuVVVZ/A==', 1),
- (nextval('user_account_id_user_seq'), 'philippe@gmail.com', 'Yves', 'phil', 'Costaud', 'ctoRAz/QWO3iVgnuVVVZ/A==', 1),
- (nextval('user_account_id_user_seq'), 'eric@gmail.com', 'Eric', 'admin', 'Grand', 'FX1B20k3eIFbb293HQgnJA==', 2);
+ (nextval('user_account_id_user_seq'), 'florent.r@gmail.com', 'Florent', 'flodu13', 'Petit', 'jux9SV/jYFAKFKPY/u+lgA==', 1),
+ (nextval('user_account_id_user_seq'), 'philippe@gmail.com', 'Yves', 'phil', 'Costaud', 'jux9SV/jYFAKFKPY/u+lgA==', 1),
+ (nextval('user_account_id_user_seq'), 'eric@gmail.com', 'Eric', 'admin', 'Grand', 'jux9SV/jYFAKFKPY/u+lgA==', 2);
 
 
 INSERT INTO public.spot(id_spot,  niveau_difficulte, name,  nombre_voie, tag, id_address)

@@ -9,6 +9,10 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav mr-auto">
+		<c:if test="${sessionScope.currentUser  !=null}">
+				<li class="nav-item"><a class="navbar-brand " href="logout">Déconnexion</a>
+				</li>
+			</c:if>
 			<c:if test="${sessionScope.currentUser == null}">
 				<li class="nav-item"><a class="navbar-brand " href="Connexion">Connexion</a>
 				</li>

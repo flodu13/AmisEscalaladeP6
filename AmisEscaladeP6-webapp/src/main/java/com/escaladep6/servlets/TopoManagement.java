@@ -85,6 +85,9 @@ public class TopoManagement extends HttpServlet {
 
 			}
 		}
+		
+		request.setAttribute("topos", topoService.getTopoByUser(topo.getUser().getIdUser()));
+
 
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/topomanagement.jsp").forward(request, response);
 
